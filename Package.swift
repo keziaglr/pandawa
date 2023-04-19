@@ -19,8 +19,8 @@ let package = Package(
             bundleIdentifier: "keziaglr.Pandawa",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .coins),
-            accentColor: .presetColor(.orange),
+            appIcon: .asset("AppIcon"),
+            accentColor: .presetColor(.brown),
             supportedDeviceFamilies: [
                 .pad,
                 .phone
@@ -30,13 +30,17 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
+            ],
+            appCategory: .games
         )
     ],
     targets: [
         .executableTarget(
             name: "AppModule",
-            path: "."
+            path: ".",
+            resources: [
+                .process("Resources")
+            ]
         )
     ]
 )
