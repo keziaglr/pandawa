@@ -220,8 +220,8 @@ struct Main: View {
                                     }
                                 }
                             
-                            Text("Follow the shape of the shadow by using sticks to move the puppet")
-                                .font(.system(size: 40))
+                            Text("**Follow** the shape of the shadow by using sticks to **move** the puppet")
+                                .font(.system(size: 35))
                                 .multilineTextAlignment(.center)
                                 .padding(2)
                                 .frame(width: 800)
@@ -375,8 +375,8 @@ struct Main: View {
                                 }
                             
                             
-                            Text("Follow the shape of the shadow by using sticks to move the puppet")
-                                .font(.system(size: 40))
+                            Text("**Follow** the shape of the shadow by using sticks to **move** the puppet")
+                                .font(.system(size: 35))
                                 .multilineTextAlignment(.center)
                                 .padding(2)
                                 .frame(width: 800)
@@ -531,8 +531,8 @@ struct Main: View {
                                 }
                             
                             
-                            Text("Follow the shape of the shadow by using sticks to move the puppet")
-                                .font(.system(size: 40))
+                            Text("**Follow** the shape of the shadow by using sticks to **move** the puppet")
+                                .font(.system(size: 35))
                                 .multilineTextAlignment(.center)
                                 .padding(2)
                                 .frame(width: 800)
@@ -634,7 +634,7 @@ struct Main: View {
                                     Text("Arjuna")
                                         .font(.system(size: 40))
                                         .fontWeight(.bold)
-                                    Text("Arjuna is the youngest son of Prabu Dewanata and Dewi Kunti. Arjuna is believed to be the incarnation of the god Indra, who rules the kingdom of Madukara. He is depicted as a wise and adventurous warrior, who enjoys wandering, meditating, and seeking knowledge. He is known for his noble character, warrior spirit, strong faith, and bravery.")
+                                    Text("Arjuna is the youngest son of Prabu Dewanata and Dewi Kunti. Arjuna is believed to be the incarnation of the God Indra, who rules the kingdom of Madukara. He is depicted as a wise and adventurous warrior, who enjoys wandering, meditating, and seeking knowledge. He is known for his noble character, warrior spirit, strong faith, and bravery.")
                                         .font(.title)
                                         .multilineTextAlignment(.center)
                                         .padding(5)
@@ -687,8 +687,8 @@ struct Main: View {
                                 }
                             
                             
-                            Text("Follow the shape of the shadow by using sticks to move the puppet")
-                                .font(.system(size: 40))
+                            Text("**Follow** the shape of the shadow by using sticks to **move** the puppet")
+                                .font(.system(size: 35))
                                 .multilineTextAlignment(.center)
                                 .padding(2)
                                 .frame(width: 800)
@@ -790,7 +790,7 @@ struct Main: View {
                                     Text("Nakula")
                                         .font(.system(size: 40))
                                         .fontWeight(.bold)
-                                    Text("Nakula is one of the twin sons of Pandu and Madrim. Nakula is depicted as the incarnation of the Twin Gods Aswin (gods of healing), and is skilled in playing weapons. He is a tough sword warrior with the character of honesty, loyalty, obedience to parents, ability to keep secrets, and gratitude.")
+                                    Text("Nakula is one of the twin sons of Pandu and Madrim. Nakula is depicted as the incarnation of the Twin Gods Aswin (Gods of Healing), and is skilled in playing weapons. He is a tough sword warrior with the character of honesty, loyalty, obedience to parents, ability to keep secrets, and gratitude.")
                                         .font(.title)
                                         .multilineTextAlignment(.center)
                                         .padding(5)
@@ -852,8 +852,8 @@ struct Main: View {
                                 }
                             
                             
-                            Text("Follow the shape of the shadow by using sticks to move the puppet")
-                                .font(.system(size: 40))
+                            Text("**Follow** the shape of the shadow by using sticks to **move** the puppet")
+                                .font(.system(size: 35))
                                 .multilineTextAlignment(.center)
                                 .padding(2)
                                 .frame(width: 800)
@@ -970,6 +970,14 @@ struct Main: View {
                                             .foregroundColor(.black)
                                             .font(.system(size: 25))
                                             .fontWeight(.bold)
+                                            .opacity(showNextLevel ? 1 : 0)
+                                            .onAppear {
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                                                    withAnimation(Animation.easeInOut(duration: 2.0)) {
+                                                        showNextLevel = true
+                                                    }
+                                                }
+                                            }
                                         
                                     }).offset(y: -150)
                                     
@@ -985,7 +993,7 @@ struct Main: View {
                             .font(.system(size: 35))
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color.white)
-                            .frame(width: 900)
+                            .frame(width: 700)
                             .opacity(showEnding ? 1 : 0)
                             .onAppear {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

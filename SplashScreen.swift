@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AVKit
+import AVFoundation
 
 struct SplashScreen: View {
     @State private var showLayer1 = false

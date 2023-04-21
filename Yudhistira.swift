@@ -446,7 +446,7 @@ class YudhistiraNode: SKSpriteNode{
         rightStick.physicsBody?.collisionBitMask = 0
         self.addChild(rightStick)
         
-        let maxRange: CGFloat = self.leftArm.size.height + self.leftHand.size.height - 18
+        let maxRange: CGFloat = self.leftArm.size.height + self.leftHand.size.height - 20
         let circlePath = UIBezierPath(arcCenter: CGPoint.zero, radius: maxRange, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
         rightRange = SKShapeNode(path: circlePath.cgPath)
         rightRange.position = rightArm.position

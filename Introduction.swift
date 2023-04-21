@@ -158,7 +158,7 @@ struct Introduction: View {
                                 Text("Pandawa is the name given to five siblings in the shadow puppet characters featured in the story of the Mahabharata. As the name suggests, Pandawa consists of five characters who are the children of Pandu, a king in Hastinapura. Each of these five characters has different personalities and traits.")
                                     .font(.system(size: 30))
                                     .foregroundColor(.white)
-                                    .frame(width: 900)
+                                    .frame(width: 700)
                                     .padding(.top, 10)
                                     .multilineTextAlignment(.center)
                                     .opacity(showDesc ? 1 : 0)
@@ -183,7 +183,7 @@ struct Introduction: View {
                                 }
                                 
                                 SpriteView(scene: PandawaScene(size: CGSize(width: 390, height: 200), dataWayang: dataWayang), options: [.allowsTransparency])
-                                    .frame(width: 1000, height: 700, alignment: .bottom)
+                                    .frame(width: 700, height: 500, alignment: .bottom)
                                     .id(refreshID)
                                     .transition(.move(edge: .leading))
                                     .opacity(showPandawa ? 1 : 0)

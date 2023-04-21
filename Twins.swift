@@ -28,7 +28,7 @@ class TwinsScene: SKScene{
         
         if (dataWayang.showNakulaDesc == false && dataWayang.showSadewaDesc  == false){
             wayangNode2.position = .init(x: 150, y: 125)
-            wayangNode2.zPosition = -1
+            wayangNode2.zPosition = -2
             configPhysics(wayangNode: wayangNode2)
             
             configShadow()
@@ -361,7 +361,7 @@ class TwinsNode: SKSpriteNode{
         rightStick.physicsBody?.collisionBitMask = 0
         self.addChild(rightStick)
         
-        let maxRange: CGFloat = self.leftArm.size.height + self.leftHand.size.height - 18
+        let maxRange: CGFloat = self.leftArm.size.height + self.leftHand.size.height - 20
         let circlePath = UIBezierPath(arcCenter: CGPoint.zero, radius: maxRange, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
         rightRange = SKShapeNode(path: circlePath.cgPath)
         rightRange.position = rightArm.position
